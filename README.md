@@ -1,6 +1,6 @@
-# Hệ Thống Đánh Giá Điểm Rèn Luyện cho Sinh Viên (HPC)
+# Hệ Thống Đánh Giá Điểm Rèn Luyện cho Sinh Viên
 
-Dự án này nhằm thay thế quy trình đánh giá điểm rèn luyện bằng giấy truyền thống tại trường **Cao đẳng Công nghệ Bách khoa Hà Nội (HPC)**. Hệ thống giúp số hóa toàn bộ quy trình, từ khâu sinh viên tự chấm đến khi giảng viên và admin quản lý.
+Dự án này nhằm thay thế quy trình đánh giá điểm rèn luyện bằng giấy truyền thống tại trường. Hệ thống giúp số hóa toàn bộ quy trình, từ khâu sinh viên tự chấm đến khi giảng viên và admin quản lý.
 
 ## Tài khoản thử nghiệm
 * **Website:** [HPC Rèn Luyện](http://hpcrenluyen.infinityfree.me/)
