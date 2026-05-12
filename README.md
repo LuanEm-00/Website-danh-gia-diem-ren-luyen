@@ -5,7 +5,7 @@ Dự án này nhằm thay thế quy trình đánh giá điểm rèn luyện bằ
 ## Tài khoản thử nghiệm
 * **Website:** [HPC Rèn Luyện](http://hpcrenluyen.infinityfree.me/)
 * **Tài khoản Test:**
-    * **Admin:** `admin` / `Admin@123` (CURD user, phiếu, khoa, lớp)
+    * **Admin:** `admin` / `Admin@123` (CRUD user, phiếu, khoa, lớp)
     * **Giảng viên:** `nguyenhoailinh` / `123` (Xem, in, in nhiều phiếu)
     * **Sinh viên:** `luanvu` / `123` (Tự đánh giá, xem, in phiếu)
 
