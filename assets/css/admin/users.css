@@ -1,0 +1,60 @@
+/* ── ADMIN USERS ── */
+
+/* Modal */
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#modal-overlay.show {
+    display: flex;
+}
+
+#modal-overlay>div {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    width: 500px;
+    max-width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#modal-overlay h3 {
+    margin-bottom: 20px;
+    color: #1a2e4a;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    width: 500px;
+    max-width: 95%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-box h3 {
+    margin-bottom: 20px;
+    color: #1a2e4a;
+}

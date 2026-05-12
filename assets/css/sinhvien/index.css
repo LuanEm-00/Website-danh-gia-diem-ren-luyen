@@ -1,0 +1,41 @@
+/* ── SINH VIÊN INDEX ── */
+
+.sv-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 0;
+}
+
+.info-item {
+    padding: 0;
+}
+
+.info-label {
+    color: #888;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-weight: 600;
+    color: #1a2e4a;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+.empty-message .btn {
+    margin-top: 12px;
+}

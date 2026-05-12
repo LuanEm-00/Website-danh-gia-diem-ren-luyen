@@ -1,0 +1,28 @@
+/* ── ADMIN DASHBOARD ── */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    border-left: 4px solid #1a56a0;
+}
+
+.stat-card .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a56a0;
+}
+
+.stat-card .label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 4px;
+}

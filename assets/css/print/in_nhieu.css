@@ -1,0 +1,284 @@
+/* ── PRINT IN NHIỀU PHIẾU ── */
+@page {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    background: #ccc;
+    color: #000;
+}
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #1a2e4a;
+    color: #fff;
+    padding: 9px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.toolbar span {
+    font-size: 0.88rem;
+    opacity: 0.8;
+}
+
+.btn-print {
+    background: #fff;
+    color: #1a2e4a;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.88rem;
+}
+
+.btn-back {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    text-decoration: none;
+    background: transparent;
+}
+
+.wrap {
+    padding: 52px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phieu {
+    background: #fff;
+    width: 210mm;
+    padding: 6mm 12mm 6mm;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    page-break-after: always;
+}
+
+.phieu:last-child {
+    page-break-after: auto;
+}
+
+@media screen {
+    .phieu {
+        margin-bottom: 20px;
+    }
+}
+
+/* Header */
+.hdr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2mm;
+    font-size: 10pt;
+}
+
+.hdr-col {
+    text-align: center;
+    width: 48%;
+    line-height: 1.5;
+}
+
+.hdr-col b {
+    display: block;
+}
+
+/* Title */
+.tieude {
+    text-align: center;
+    margin: 2mm 0 2mm;
+}
+
+.tieude h2 {
+    font-size: 13pt;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+}
+
+.tieude p {
+    font-size: 9.5pt;
+    margin-top: 0.5mm;
+    font-style: italic;
+}
+
+/* Info */
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1mm 55mm;
+    margin-bottom: 2mm;
+    font-size: 10pt;
+}
+
+.info-row {
+    display: flex;
+    gap: 3px;
+}
+
+.info-label {
+    white-space: nowrap;
+}
+
+.info-val {
+    flex: 1;
+    padding-bottom: 1px;
+}
+
+/* Score table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 1mm 0;
+}
+
+table th,
+table td {
+    border: 1px solid #222;
+    padding: 2px 3px;
+    vertical-align: middle;
+}
+
+table th {
+    background: #e8e8e8;
+    text-align: center;
+    font-weight: 700;
+}
+
+.col-max {
+    width: 20mm;
+    text-align: center;
+}
+
+.col-diem {
+    width: 22mm;
+    text-align: center;
+}
+
+.col-note {
+    width: 18mm;
+}
+
+.row-cha td {
+    background: #d0d0d0;
+    font-weight: 700;
+    font-size: 10.5pt;
+}
+
+.row-cha .col-max,
+.row-cha .col-diem {
+    text-align: center;
+}
+
+.row-tong td {
+    font-weight: 700;
+    background: #f0f0f0;
+}
+
+.ghichu {
+    font-size: 9pt;
+    font-style: italic;
+    margin: 1mm 0;
+}
+
+.ketluan {
+    font-size: 9.5pt;
+    margin: 1mm 0;
+}
+
+.ketluan .line {
+    border-bottom: 1px dotted #333;
+    display: inline-block;
+    width: 50mm;
+}
+
+.ngay {
+    text-align: right;
+    font-size: 9.5pt;
+    font-style: italic;
+    margin: 2mm 0;
+}
+
+.kyten {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6mm;
+    font-size: 9.5pt;
+}
+
+.kyten-col {
+    text-align: center;
+    width: 30%;
+}
+
+.kyten-col .title {
+    font-weight: 700;
+}
+
+.kyten-col .sub {
+    font-size: 9.5pt;
+    font-style: italic;
+}
+
+.kyten-col .name {
+    margin-top: 14mm;
+    font-weight: 700;
+}
+
+/* Content padding */
+.td-main {
+    padding: 2px 3px 2px 4px;
+    font-size: 8.5pt;
+}
+
+.td-sub {
+    padding: 2px 3px 2px 8px;
+    font-size: 8.5pt;
+}
+
+/* Print specific */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .toolbar {
+        display: none;
+    }
+
+    .wrap {
+        padding: 0;
+    }
+
+    .phieu {
+        box-shadow: none;
+        width: 100%;
+        padding: 5mm 12mm;
+    }
+
+    table th,
+    .row-cha td,
+    .row-tong td {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}

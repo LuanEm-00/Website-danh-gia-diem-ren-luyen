@@ -1,0 +1,159 @@
+/* ── SINH VIÊN LAYOUT ── */
+
+body {
+    background: #faf8f6;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    padding: 24px 20px 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo span {
+    font-size: 0.78rem;
+    font-weight: 400;
+    opacity: 0.7;
+    display: block;
+}
+
+.sidebar nav {
+    flex: 1;
+    padding: 12px 0;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: background 0.15s, color 0.15s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.sidebar-footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.82rem;
+    opacity: 0.7;
+}
+
+.sidebar-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.topbar {
+    background: #fff;
+    padding: 14px 28px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.92rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar strong {
+    color: #2c3e50;
+}
+
+.page-content {
+    padding: 28px;
+}
+
+/* Ẩn brand trên desktop (sidebar đã có logo) */
+.topbar-brand { display: none; }
+
+/* ── BOTTOM NAV (ẩn trên desktop) ── */
+.bottom-nav {
+    display: none;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        padding: 12px 16px;
+    }
+
+    .topbar-title  { display: none; }
+    .topbar-brand  { display: block; font-weight: 700; color: #2c3e50; font-size: 0.95rem; }
+
+    .page-content {
+        padding: 16px;
+        padding-bottom: 74px;
+    }
+
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 100;
+    }
+
+    .bottom-nav a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 4px;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.7rem;
+        gap: 2px;
+        transition: background 0.15s, color 0.15s;
+    }
+
+    .bottom-nav a .nav-icon {
+        font-size: 1.3rem;
+        line-height: 1;
+    }
+
+    .bottom-nav a.active,
+    .bottom-nav a:hover {
+        color: #fff;
+        background: #e74c3c;
+    }
+
+    .bottom-nav a { padding: 8px 4px; }
+    .bottom-nav a .nav-icon { font-size: 1.2rem; line-height: 1; }
+}

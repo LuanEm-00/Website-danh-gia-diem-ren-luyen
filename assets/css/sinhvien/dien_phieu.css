@@ -1,0 +1,310 @@
+/* ── SINH VIÊN ĐIỀN PHIẾU ── */
+
+/* Hàng chọn học kỳ / năm học */
+.hk-select-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hk-select-row .form-group {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Cột header bảng điểm */
+.th-toida    { width: 90px; }
+.th-tudanhgia { width: 120px; }
+
+/* Hàng mục (I, II, III, IV) */
+.muc-row {
+    background: #1a2e4a;
+    color: #fff;
+}
+
+.muc-row td {
+    padding: 10px 16px;
+    font-weight: 700;
+}
+
+.muc-row .tbl-num {
+    text-align: center;
+}
+
+/* Ô tiêu chí con */
+.tc-ten { padding-left: 24px; }
+.tc-max { text-align: center; color: #666; }
+.tc-diem { text-align: center; }
+
+
+.score-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.score-table thead {
+    background: #2c3e50;
+    color: #fff;
+}
+
+.score-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.score-table th:nth-child(2),
+.score-table th:nth-child(3) {
+    text-align: center;
+    width: 120px;
+}
+
+.score-table tbody tr {
+    border-bottom: 1px solid #edf2f7;
+}
+
+tr.muc-row:hover td {
+    background: #1a2e4a;
+}
+
+
+.score-table td {
+    padding: 11px 16px;
+    font-size: 0.9rem;
+}
+
+.score-table td:nth-child(2),
+.score-table td:nth-child(3) {
+    text-align: center;
+}
+
+.muc-header {
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 16px !important;
+}
+
+.diem-input {
+    width: 70px;
+    padding: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.diem-input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+
+.diem-input.error {
+    border-color: #e53e3e;
+    background: #fff5f5;
+}
+
+.tong-muc {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.tong-tat-ca {
+    font-size: 1.1rem;
+    color: #e74c3c;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hint-text {
+    color: #888;
+    font-size: 0.83rem;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    /* Ẩn header bảng + cột tối đa */
+    #tbl-diem thead,
+    .th-toida { display: none; }
+
+    /* Chuyển bảng sang block */
+    #tbl-diem,
+    #tbl-diem tbody,
+    #tbl-diem tfoot { display: block; }
+
+    /* Xóa border-bottom từ global CSS */
+    #tbl-diem td { border-bottom: none; }
+
+    /* ── Section header (mục I/II/III/IV) ── */
+    #tbl-diem .muc-row,
+    #tbl-diem .tbl-muc-row {
+        display: block;
+        border-radius: 10px;
+        margin: 24px 0 10px;
+        padding: 0;
+    }
+
+    #tbl-diem .muc-row td:nth-child(1),
+    #tbl-diem .tbl-muc-row td:nth-child(1) {
+        display: block;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+
+    #tbl-diem .muc-row td:nth-child(2),
+    #tbl-diem .muc-row td:nth-child(3),
+    #tbl-diem .tbl-muc-row td:nth-child(2),
+    #tbl-diem .tbl-muc-row td:nth-child(3) { display: none; }
+
+    /* ── Subtotal card (inject bằng JS) ── */
+    .subtotal-row { display: block; }
+
+    .subtotal-row td {
+        display: block;
+        background: #eef3f9;
+        border-radius: 10px;
+        margin: 4px 0 20px;
+        padding: 10px 16px;
+        font-size: 0.87rem;
+        color: #4a6080;
+    }
+
+    .subtotal-current {
+        font-weight: 700;
+        color: #1a56a0;
+    }
+
+    /* ── Card từng tiêu chí — layout dọc ── */
+    #tbl-diem tbody tr:not(.muc-row):not(.tbl-muc-row):not(.subtotal-row) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid #e8edf2;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        margin-bottom: 8px;
+        padding: 16px;
+    }
+
+    /* Nội dung tiêu chí */
+    #tbl-diem tbody tr .tc-ten,
+    #tbl-diem tbody tr .tbl-item-ten {
+        padding: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #2c3e50;
+    }
+
+    /* Ẩn cột max trong tiêu chí */
+    #tbl-diem tbody tr .tc-max,
+    #tbl-diem tbody tr .tbl-item-max { display: none; }
+
+    /* Dòng stepper + max hint */
+    #tbl-diem tbody tr .tc-diem,
+    #tbl-diem tbody tr .tbl-item-diem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    /* Nhãn "cao nhất: X" */
+    .max-hint {
+        font-size: 0.78rem;
+        color: #9ca3af;
+    }
+
+    /* ── Hàng tổng cộng ── */
+    #tbl-diem tfoot tr.tbl-tong-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 16px;
+        padding: 14px 16px;
+    }
+
+    #tbl-diem tfoot .tbl-num { display: none; }
+
+    /* ── Stepper [−] input [+] ── */
+    .stepper {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .stepper-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: #e5e7eb;
+        border: none;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #374151;
+        touch-action: manipulation;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stepper-btn:active {
+        background: #3b82f6;
+        color: #fff;
+    }
+
+    .stepper .diem-input {
+        width: 50px;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 16px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    /* Highlight khi có điểm > 0 */
+    .diem-input.has-value {
+        color: #2563eb;
+        border-color: #93c5fd;
+    }
+
+    /* Input fallback khi không có stepper */
+    .diem-input {
+        width: 64px;
+        font-size: 1rem;
+        padding: 8px 4px;
+    }
+
+    /* ── Nút submit full width ── */
+    .form-actions,
+    .phieu-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-top: 24px;
+    }
+
+    .form-actions .btn,
+    .phieu-form-actions .btn { text-align: center; }
+
+    .form-actions .btn-primary,
+    .phieu-form-actions .btn-primary {
+        padding: 15px;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+}

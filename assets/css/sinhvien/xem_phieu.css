@@ -1,0 +1,365 @@
+/* ── BẢNG PHIẾU DANH SÁCH ── */
+
+.phieu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.phieu-table thead {
+    background: #1a2e4a;
+    color: white;
+}
+
+.phieu-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #1a2e4a;
+}
+
+.phieu-table th.tbl-num {
+    text-align: center;
+    width: 120px;
+}
+
+.phieu-table th.col-actions {
+    text-align: center;
+    width: 200px;
+}
+
+.phieu-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.2s;
+}
+
+.phieu-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.phieu-table td {
+    padding: 12px 16px;
+    vertical-align: middle;
+}
+
+.phieu-table td.tbl-num {
+    text-align: center;
+    font-weight: 500;
+}
+
+.phieu-table td.col-actions {
+    text-align: center;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── NÚT THAO TÁC ── */
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+
+.btn-sm.btn-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-sm.btn-primary:hover {
+    background: #1e40af;
+}
+
+.btn-sm.btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-sm.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* ── PHÂN TRANG ── */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.pag-btn {
+    padding: 8px 12px;
+    background: #e2e8f0;
+    color: #1a2e4a;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pag-btn:hover {
+    background: #cbd5e0;
+    border-color: #a0aec0;
+}
+
+.pag-btn:disabled,
+.pag-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pag-info {
+    padding: 8px 16px;
+    color: #666;
+    font-weight: 500;
+    min-width: 140px;
+    text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+    .phieu-table {
+        font-size: 0.9rem;
+    }
+
+    .phieu-table th,
+    .phieu-table td {
+        padding: 8px 10px;
+    }
+
+    .phieu-table th.col-actions {
+        width: 160px;
+    }
+
+    .btn-sm {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+
+    .phieu-table td.col-actions {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .btn-sm {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .pag-btn {
+        padding: 6px 10px;
+        min-width: 36px;
+        font-size: 0.9rem;
+    }
+
+    .pag-info {
+        width: 100%;
+        order: -1;
+        margin-bottom: 8px;
+    }
+}
+
+font-size: 0.83rem;
+}
+
+/* Xếp loại */
+.xep-loai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border-left: 4px solid;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 14px;
+}
+
+.xep-loai-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.xep-loai-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+.empty-state .btn {
+    margin-top: 12px;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    .phieu-layout {
+        flex-direction: column;
+    }
+
+    .phieu-list {
+        max-width: 100%;
+    }
+
+    .phieu-detail {
+        min-width: 0;
+    }
+
+    .phieu-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .phieu-form-actions .btn {
+        text-align: center;
+    }
+
+    .chi-tiet-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .phieu-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Ẩn header bảng + cột tối đa trong header */
+    .th-col-max {
+        display: none;
+    }
+
+    /* Chuyển bảng chi tiết sang card layout */
+    .phieu-detail table,
+    .phieu-detail tbody,
+    .phieu-detail tfoot {
+        display: block;
+    }
+
+    .phieu-detail thead {
+        display: none;
+    }
+
+    .phieu-detail td {
+        border-bottom: none;
+    }
+
+    /* Section header (mục I/II/III/IV) */
+    .phieu-detail .tbl-muc-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        margin: 20px 0 8px;
+        padding: 12px 16px;
+    }
+
+    .phieu-detail .tbl-muc-row td:nth-child(2) {
+        display: none;
+    }
+
+    .phieu-detail .tbl-muc-row td:nth-child(3) {
+        font-weight: 700;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    /* Criterion rows → card, wrap để score + max cùng dòng */
+    .phieu-detail tbody tr:not(.tbl-muc-row) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px 0;
+        background: #fff;
+        border-radius: 12px;
+        border: 1px solid #e8edf2;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        margin-bottom: 8px;
+        padding: 14px;
+    }
+
+    /* Tên tiêu chí - full width */
+    .phieu-detail tbody tr .tbl-item-ten {
+        flex: 1 1 100%;
+        padding: 0 0 6px 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #2c3e50;
+    }
+
+    /* Điểm - bên trái */
+    .phieu-detail tbody tr .tbl-item-diem {
+        flex: 1;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* Score bar nhỏ gọn */
+    .score-bar {
+        width: 50px;
+        margin-inline: 0;
+        margin-top: 3px;
+    }
+
+    /* Max (0÷X) - bám mép phải */
+    .phieu-detail tbody tr .tbl-item-max {
+        display: block;
+        flex: 0 0 auto;
+        font-size: 0.78rem;
+        color: #9ca3af;
+        padding: 0;
+    }
+
+    /* Hàng tổng cộng */
+    .phieu-detail tfoot tr.tbl-tong-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 12px;
+        padding: 14px 16px;
+    }
+
+    .phieu-detail tfoot .tbl-num {
+        display: none;
+    }
+
+    /* Nút hành động (Sửa phiếu / In phiếu) */
+    .phieu-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .phieu-actions .btn {
+        text-align: center;
+        padding: 12px;
+    }
+}

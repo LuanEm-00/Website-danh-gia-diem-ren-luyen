@@ -1,0 +1,30 @@
+/* ── ADMIN PHIẾU ── */
+
+/* Filter form */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+/* Toolbar */
+.card[style*="padding:12px"] {
+    padding: 12px 20px !important;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Action buttons */
+.btn-confirm-delete {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.btn-confirm-delete:hover {
+    opacity: 0.88;
+}

@@ -1,0 +1,280 @@
+/* ── RESET & BASE ── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+/* ── TRANG ĐĂNG NHẬP ── */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a56a0, #2d8fe3);
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 16px;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-logo h2 {
+    font-size: 2rem;
+    color: #1a56a0;
+}
+
+.login-logo p {
+    color: #666;
+    margin-top: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #1a56a0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 6px;
+}
+
+.btn-login:hover {
+    background: #154080;
+}
+
+/* ── FORM CHUNG ── */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2d8fe3;
+    box-shadow: 0 0 0 3px rgba(45, 143, 227, 0.15);
+}
+
+/* ── BUTTON ── */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.btn-primary {
+    background: #1a56a0;
+    color: #fff;
+}
+
+.btn-danger {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.btn-secondary {
+    background: #718096;
+    color: #fff;
+}
+
+.btn-success {
+    background: #38a169;
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+.btn:hover {
+    opacity: 0.88;
+}
+
+/* ── ALERT ── */
+.alert {
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.alert-error {
+    background: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+.alert-success {
+    background: #f0fff4;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+}
+
+/* ── BADGE ── */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #c6f6d5;
+    color: #276749;
+}
+
+.badge-warning {
+    background: #fefcbf;
+    color: #744210;
+}
+
+.badge-info {
+    background: #bee3f8;
+    color: #2a69ac;
+}
+
+/* ── CARD ── */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a2e4a;
+    margin-bottom: 16px;
+}
+
+/* ── TABLE ── */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+table th {
+    background: #1a56a0;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.88rem;
+}
+
+table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.9rem;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:hover td {
+    background: #f7fafc;
+}
+
+/* ── CARD UTILITIES ── */
+.card-mb-sm {
+    margin-bottom: 16px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-header .card-title {
+    margin: 0;
+}
+
+/* ── BUTTON SIZES ── */
+.btn-lg {
+    padding: 10px 28px;
+}
+
+/* ── PAGE TITLE ── */
+.page-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a2e4a;
+    margin-bottom: 20px;
+}
+
+/* ── MOBILE CHUNG ── */
+@media (max-width: 768px) {
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        overflow-x: auto;
+    }
+
+    .page-title {
+        font-size: 1.15rem;
+        margin-bottom: 14px;
+    }
+}
